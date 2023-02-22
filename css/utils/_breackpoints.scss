@@ -1,0 +1,37 @@
+$breakpoints: (
+  start: 0px,
+  mobile-s: 320px,
+  mobile-m: 360px,
+  mobile-l: 480px,
+  tablet: 540px,
+  screen-s: 1024px,
+  screen-m: 1366px,
+  screen-l: 1920px,
+  screen-xl: 3840px,
+);
+
+@mixin breakpointMin($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Invalid breakpoint `#{$name}`.";
+  }
+  @else {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpointMax($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Invalid breakpoint `#{$name}`.";
+  }
+  @else {
+    @media (max-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}
+
+// @include breakpoint(small) {
+//   font-size: 1.2em;
+// }

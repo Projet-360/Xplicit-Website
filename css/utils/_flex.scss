@@ -1,0 +1,796 @@
+// TOUTES LES PROPRIETES POUR FLEX
+
+//DISPLAY
+@mixin display_flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin display_inline {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+//FLEX-DIRECTION
+@mixin flex-direction_row {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+@mixin flex-direction_row-reverse {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+@mixin flex-direction_column {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex-direction_column-reverse {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+//FLEX-WRAP
+@mixin flex-wrap_nowrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+@mixin flex-wrap_wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin flex-wrap_wrap-reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+//JUSTIFY-CONTENT
+@mixin justify-content_start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+@mixin justify-content_end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+@mixin justify-content_center {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@mixin justify-content_space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@mixin justify-content_space-around {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+@mixin justify-content_stretch {
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+//ALIGN CONTENT
+@mixin align-content_start {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+@mixin align-content_end {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+}
+
+@mixin align-content_center {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+@mixin align-content_space-between {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+@mixin align-content_space-around {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+}
+
+@mixin align-content_stretch {
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+//ALIGN-ITEMS
+@mixin align-items_start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+@mixin align-items_end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+@mixin align-items_center {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin align-items_baseline {
+    -webkit-box-align: baseline;
+    -moz-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+
+@mixin align-items_stretch {
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+// TEMPLATE DE PROPRIETES POUR MIXINS
+//Template
+@mixin rts {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_stretch;
+    @include align-items_start;
+}
+
+@mixin rte {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_end;
+    @include align-content_stretch;
+    @include align-items_start;
+}
+
+@mixin rtc {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_center;
+    @include align-content_stretch;
+    @include align-items_start;
+}
+
+@mixin rtb {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+@mixin rta {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+@mixin rcs {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin rce {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin rcc {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin rcb {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin rca {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin rbs {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin rbe {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin rbc {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin rbb {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+
+}
+
+@mixin rba {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin cls {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+@mixin cle {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_end;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+@mixin clc {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+@mixin clb {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+@mixin cla {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+@mixin ccs {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin cce {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_end;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin ccc {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin ccb {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin cca {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+@mixin crs {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin cre {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin crc {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin crb {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin cra {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+@mixin nowrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+@mixin wrap-reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+@mixin row-reverse {
+    -webkit-flex-wrap: row-reverse;
+    -ms-flex-wrap: row-reverse;
+    flex-wrap: row-reverse;
+}
+
+@mixin column-reverse {
+    -webkit-flex-wrap: column-reverse;
+    -ms-flex-wrap: column-reverse;
+    flex-wrap: column-reverse;
+}
+
+//____________________________________________________________________Getters CSS _______________________________________________________________________
+
+.rts {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_stretch;
+    @include align-items_start;
+}
+
+.rte {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_end;
+    @include align-content_stretch;
+    @include align-items_start;
+}
+
+.rtc {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_center;
+    @include align-content_stretch;
+    @include align-items_start;
+}
+
+.rtb {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+.rta {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+.rcs {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.rce {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.rcc {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.rcb {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.rca {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.rbs {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.rbe {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.rbc {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.rbb {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.rba {
+    @include display_flex;
+    @include flex-direction_row;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.cls {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+.cle {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_end;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+.clc {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+.clb {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+.cla {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_start;
+    @include align-items_start;
+}
+
+.ccs {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.cce {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_end;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.ccc {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.ccb {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.cca {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_center;
+    @include align-items_center;
+}
+
+.crs {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_start;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.cre {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.crc {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content-center;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.crb {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-between;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.cra {
+    @include display_flex;
+    @include flex-direction_column;
+    @include flex-wrap_wrap;
+    @include justify-content_space-around;
+    @include align-content_end;
+    @include align-items_end;
+}
+
+.nowrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.wrap-reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+.row-reverse {
+    -webkit-flex-wrap: row-reverse;
+    -ms-flex-wrap: row-reverse;
+    flex-wrap: row-reverse;
+}
+
+.column-reverse {
+    -webkit-flex-wrap: column-reverse;
+    -ms-flex-wrap: column-reverse;
+    flex-wrap: column-reverse;
+}

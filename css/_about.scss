@@ -1,0 +1,51 @@
+
+
+.about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  
+    margin-top: 50px;
+  
+    min-height: 100vh;
+  
+    .about-right {
+      width: 50vw;
+      img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  
+    .about-left {
+      width: 50vw;
+      padding-left: 10vw;
+      .about-title {
+        .about-title-text {
+          font-family: italic;
+          font-size: 60px;
+          -webkit-text-stroke: 2px black;
+          color: transparent;
+          text-transform: uppercase;
+          font-weight: 900;
+          font-style: italic;
+          transform: skewX(-10deg);
+        }
+        width: 100%;
+        margin-bottom: 50px;
+      }
+    
+      .about-paragraph {
+        width: 500px;
+        font-size: 18px;
+        text-align: justify;
+        text-transform: uppercase;
+        font-family: regular;
+      }
+    }
+  
+  }

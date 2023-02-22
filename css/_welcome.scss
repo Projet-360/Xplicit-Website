@@ -1,0 +1,249 @@
+.welcome {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+
+  .containerText {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+
+    margin-left: 10vw;
+    position: relative;
+    z-index: 9;
+
+    width: 50%;
+    height: 100vh;
+
+    @media screen and (max-width: 540px) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      width: 100vw;
+      margin: 0;
+    }
+
+    .title {
+      -webkit-text-stroke: 2px black;
+      /* width and color */
+      font-family: italic;
+      font-size: 60px;
+      color: transparent;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-style: italic;
+      transform: skewX(-10deg);
+      margin-bottom: 0;
+
+      @media screen and (max-width: 540px) {
+        font-size: 40px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @media screen and (max-width: 360px) {
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .paragraph {
+      width: 724px;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: justify;
+      text-transform: uppercase;
+      font-family: medium;
+
+      @media screen and (max-width: 724px) {
+        width: 80vw;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+    }
+
+    .subParagraph {
+      width: 724px;
+      font-size: 12px;
+      text-align: justify;
+      text-transform: uppercase;
+      font-family: regular;
+    }
+
+    #holder {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      border: 10px dashed rgb(0, 0, 0);
+      width: 150px;
+      height: 150px;
+      margin: 20px auto;
+      background-image: url(../assets/dragdrop.png);
+      background-position: center;
+      z-index: 5;
+      padding: 17px;
+
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
+    }
+
+    #holder.hover {
+      border: 10px dashed #333;
+      z-index: 6;
+    }
+
+    .box {
+      margin-right: auto;
+      margin-left: auto;
+      z-index: 6;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
+    }
+
+    .fileLoader-2 {
+      display: none;
+    }
+
+    .fileLoader+label {
+      font-size: 1.25rem;
+      /* 20px */
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: justify;
+      text-transform: uppercase;
+      font-family: regular;
+      width: 204px;
+      text-align: center;
+      padding: 10px 0px;
+      /* 10px 20px */
+    }
+
+    .fileLoader:focus+label,
+    .fileLoader.has-focus+label {
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    .fileLoader+label * {
+      /* pointer-events: none; */
+      /* in case of FastClick lib use */
+    }
+
+    .fileLoader+label svg {
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+      fill: currentColor;
+      margin-top: -0.25em;
+      /* 4px */
+      margin-right: 0.25em;
+      /* 4px */
+    }
+
+
+    .fileLoader-2+label {
+      color: #000000;
+      border: 2px solid currentColor;
+    }
+
+    .fileLoader-2:focus+label,
+    .fileLoader-2.has-focus+label,
+    .fileLoader-2+label:hover {
+      color: #2b2b2b;
+    }
+
+    button {
+      width: 204px;
+      background-color: transparent;
+      padding: 10px 0px;
+
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
+      
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+        text-transform: uppercase;
+        font-family: regular;
+        color: #2b2b2b;
+      }
+    }
+  }
+
+  .occitanie {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+
+    svg {
+      position: absolute;
+      z-index: 4;
+      width: 50vw;
+      opacity: .2;
+    }
+  }
+
+
+  .containerCan {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    transform: translate(20vw, 0px);
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+  }
+}
