@@ -986,6 +986,12 @@ template {
     margin-top: 5vh;
   }
 }
+@media (min-width: 540px) {
+  .header .header-nav {
+    margin-top: 5vh;
+    padding-left: 30px;
+  }
+}
 @media (max-width: 480px) {
   .header .header-nav {
     margin-top: 5vh;
@@ -1010,6 +1016,11 @@ template {
 @media (min-width: 1024px) {
   .header .header-nav .header-nav-wrapper {
     height: 45vh;
+  }
+}
+@media (min-width: 540px) {
+  .header .header-nav .header-nav-wrapper {
+    transform: unset;
   }
 }
 @media (max-width: 540px) {
@@ -1571,17 +1582,12 @@ template {
   transform: translateX(0px);
 }
 
-.welcome {
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-}
 .welcome .containerText {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
+  justify-content: flex-start;
+  align-content: center;
   align-items: center;
   margin-left: 10vw;
   position: relative;
@@ -1589,7 +1595,7 @@ template {
   width: 50%;
   height: 100vh;
 }
-@media screen and (max-width: 540px) {
+@media (min-width: 0px) {
   .welcome .containerText {
     display: flex;
     flex-direction: column;
@@ -1598,6 +1604,18 @@ template {
     align-content: center;
     align-items: center;
     width: 100vw;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .welcome .containerText {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 50%;
     margin: 0;
   }
 }
@@ -1613,18 +1631,53 @@ template {
   transform: skewX(-10deg);
   margin-bottom: 0;
 }
-@media screen and (max-width: 540px) {
+@media (min-width: 0px) {
   .welcome .containerText .title {
-    font-size: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 22px;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 360px) {
+@media (min-width: 320px) {
+  .welcome .containerText .title {
+    font-size: 22px;
+    -webkit-text-stroke: 1px black;
+  }
+}
+@media (min-width: 360px) {
   .welcome .containerText .title {
     font-size: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    -webkit-text-stroke: 1px black;
+  }
+}
+@media (min-width: 480px) {
+  .welcome .containerText .title {
+    font-size: 32px;
+    -webkit-text-stroke: 2px black;
+  }
+}
+@media (min-width: 540px) {
+  .welcome .containerText .title {
+    font-size: 40px;
+    -webkit-text-stroke: 2px black;
+  }
+}
+@media (min-width: 1024px) {
+  .welcome .containerText .title {
+    font-size: 30px;
+    -webkit-text-stroke: 2px black;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .welcome .containerText .title {
+    font-size: 60px;
+    -webkit-text-stroke: 3px black;
+  }
+}
+@media (min-width: 3840px) {
+  .welcome .containerText .title {
+    font-size: 3vw;
   }
 }
 .welcome .containerText .paragraph {
@@ -1634,6 +1687,37 @@ template {
   text-align: justify;
   text-transform: uppercase;
   font-family: medium;
+}
+@media (min-width: 0px) {
+  .welcome .containerText .paragraph {
+    font-size: 12px;
+  }
+}
+@media (min-width: 360px) {
+  .welcome .containerText .paragraph {
+    font-size: 14px;
+  }
+}
+@media (min-width: 480px) {
+  .welcome .containerText .paragraph {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .welcome .containerText .paragraph {
+    width: 80%;
+    font-size: 13px;
+  }
+}
+@media (min-width: 1920px) {
+  .welcome .containerText .paragraph {
+    font-size: 18px;
+  }
+}
+@media (min-width: 3840px) {
+  .welcome .containerText .paragraph {
+    font-size: 1vw;
+  }
 }
 @media screen and (max-width: 724px) {
   .welcome .containerText .paragraph {
@@ -1667,12 +1751,34 @@ template {
   margin: 20px auto;
   background-image: url(../assets/dragdrop.png);
   background-position: center;
+  background-size: contain;
   z-index: 5;
   padding: 17px;
 }
-@media screen and (max-width: 540px) {
+@media (min-width: 0px) {
   .welcome .containerText #holder {
     display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .welcome .containerText #holder {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border: 5px dashed rgb(0, 0, 0);
+  }
+}
+@media (min-width: 1920px) {
+  .welcome .containerText #holder {
+    width: 190px;
+    height: 190px;
+  }
+}
+@media (min-width: 3840px) {
+  .welcome .containerText #holder {
+    width: 300px;
+    height: 300px;
+    border: 5px dashed rgb(0, 0, 0);
   }
 }
 .welcome .containerText #holder.hover {
@@ -1686,9 +1792,14 @@ template {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 540px) {
+@media (min-width: 0px) {
   .welcome .containerText .box {
     display: none;
+  }
+}
+@media (min-width: 540px) {
+  .welcome .containerText .box {
+    display: flex;
   }
 }
 .welcome .containerText .fileLoader-2 {
@@ -1712,6 +1823,24 @@ template {
   text-align: center;
   padding: 10px 0px;
   /* 10px 20px */
+}
+@media (min-width: 1024px) {
+  .welcome .containerText .fileLoader + label {
+    width: 126px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 1920px) {
+  .welcome .containerText .fileLoader + label {
+    width: 226px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 3840px) {
+  .welcome .containerText .fileLoader + label {
+    width: 326px;
+    font-size: 30px;
+  }
 }
 .welcome .containerText .fileLoader:focus + label,
 .welcome .containerText .fileLoader.has-focus + label {
@@ -1742,13 +1871,39 @@ template {
   color: #2b2b2b;
 }
 .welcome .containerText button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   width: 204px;
   background-color: transparent;
   padding: 10px 0px;
 }
-@media screen and (max-width: 540px) {
+@media (min-width: 0px) {
   .welcome .containerText button {
     display: none;
+  }
+}
+@media (min-width: 540px) {
+  .welcome .containerText button {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .welcome .containerText button {
+    width: 130px;
+  }
+}
+@media (min-width: 1920px) {
+  .welcome .containerText button {
+    width: 230px;
+  }
+}
+@media (min-width: 3840px) {
+  .welcome .containerText button {
+    width: 330px;
   }
 }
 .welcome .containerText button a {
@@ -1759,6 +1914,21 @@ template {
   text-transform: uppercase;
   font-family: regular;
   color: #2b2b2b;
+}
+@media (min-width: 1024px) {
+  .welcome .containerText button a {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1920px) {
+  .welcome .containerText button a {
+    font-size: 18px;
+  }
+}
+@media (min-width: 3840px) {
+  .welcome .containerText button a {
+    font-size: 30px;
+  }
 }
 .welcome .occitanie {
   position: relative;
@@ -1776,11 +1946,18 @@ template {
   opacity: 0.2;
 }
 .welcome .containerCan {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: fixed;
+  width: 50%;
+  height: 100%;
   top: 0;
   right: 0;
   z-index: 5;
-  transform: translate(20vw, 0px);
 }
 .welcome .containerCan canvas {
   width: 100%;
@@ -1976,6 +2153,11 @@ template {
   height: 100px;
   z-index: 9;
 }
+@media (max-width: 540px) {
+  .navtop {
+    display: none;
+  }
+}
 .navtop .navtop-nav {
   display: flex;
   flex-direction: row;
@@ -2018,15 +2200,12 @@ template {
 .navtop .navtop-link .navtop-link-img {
   height: 70px;
 }
+@media (min-width: 1024px) {
+  .navtop .navtop-link .navtop-link-img {
+    height: 40px;
+  }
+}
 .navtop:hover .navtop-nav .navtop-nav-item .navtop-nav-item-span {
   transform: translateY(0%);
   display: block;
-}
-
-main {
-  position: relative;
-}
-
-section {
-  position: relative;
 }

@@ -1,7 +1,7 @@
 
 import onClassChange from "./utils/onClassChange.js";
-// import { Scene } from "./Scene.js";
-// import { Product } from "./Product.js";
+import { Scene } from "./Scene.js";
+import { Product } from "./Product.js";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -148,7 +148,7 @@ linkMenu.forEach(element => {
     });
   }
 
-// new Scene('myThreeJsCanvas', '../assets/BAT/dragon.png');
+new Scene('myThreeJsCanvas', '../assets/BAT/dragon.png');
 
 // new Product('product1', '../assets/BAT/dragon.png', 'boutique-item-canvas');
 // new Product('product2', '../assets/BAT/black.png', 'boutique-item-canvas');

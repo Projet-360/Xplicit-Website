@@ -13,6 +13,10 @@
     height: 100px;
     z-index: 9;
 
+    @include breakpointMax(tablet) {
+        display: none;
+    }
+    
     .navtop-nav {
         display: flex;
         flex-direction: row;
@@ -60,6 +64,9 @@
         
         .navtop-link-img {
             height: 70px;
+            @include breakpointMin(screen_s) {
+                height: 40px;
+            }
         }
     }
 

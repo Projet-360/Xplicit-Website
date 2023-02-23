@@ -89,7 +89,7 @@
     transition: all .15s ease .1s;
     will-change: transform;
 
-    @include breakpointMin(screen-s) {
+    @include breakpointMin(screen_s) {
       padding-bottom: 0;
     }
   }
@@ -113,7 +113,7 @@
     will-change: transform;
     user-select: none;
 
-    @include breakpointMin(screen-m) {
+    @include breakpointMin(screen_m) {
       line-height: 15vw;
     }
 
@@ -127,7 +127,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include breakpointMin(screen-s) {
+    @include breakpointMin(screen_s) {
       padding-left: 6vw;
       margin-top: 5vh;
     }
@@ -138,11 +138,16 @@
       margin-top: 5vh;
     }
 
-    @include breakpointMax(mobile-l) {
+    @include breakpointMin(tablet) {
+      margin-top: 5vh;
+      padding-left: 30px;
+    }
+
+    @include breakpointMax(mobile_l) {
       margin-top: 5vh;
     }
 
-    @include breakpointMax(mobile-s) {
+    @include breakpointMax(mobile_s) {
       margin-top: 10px;
     }
 
@@ -154,15 +159,19 @@
       margin: 0;
       z-index: 20;
 
-      @include breakpointMin(screen-s) {
+      @include breakpointMin(screen_s) {
         height: 45vh;
       }
-      
+
+      @include breakpointMin(tablet) {
+        transform: unset;
+      }
+  
       @include breakpointMax(tablet) {
         transform: unset;
       }
 
-      @include breakpointMin(mobile-s) {
+      @include breakpointMin(mobile_s) {
         height: 50vh;
       }
 
@@ -173,19 +182,19 @@
         height: 60px;
         margin-bottom: 1vh;
 
-        @include breakpointMin(screen-xl) {
+        @include breakpointMin(screen_xl) {
           height: 9vh;
         }
 
-        @include breakpointMax(screen-l) {
+        @include breakpointMax(screen_l) {
           height: 60px;
         }
 
-        @include breakpointMax(screen-m) {
+        @include breakpointMax(screen_m) {
           height: 50px;
         }
 
-        @include breakpointMax(screen-s) {
+        @include breakpointMax(screen_s) {
           height: 50px;
         }
 
@@ -205,32 +214,32 @@
           font-size: 60px;
           line-height: .9;
 
-          @include breakpointMin(screen-xl) {
+          @include breakpointMin(screen_xl) {
             font-size: 5vw;
           }
 
-          @include breakpointMax(screen-l) {
+          @include breakpointMax(screen_l) {
             font-size: 60px;
             padding: 0px 15px;
           }
 
-          @include breakpointMax(screen-m) {
+          @include breakpointMax(screen_m) {
             font-size: 40px;
           }
 
-          @include breakpointMax(screen-s) {
+          @include breakpointMax(screen_s) {
             font-size: 40px;
           }
 
-          @include breakpointMax(mobile-l) {
+          @include breakpointMax(mobile_l) {
             font-size: 45px;
           }
 
-          @include breakpointMax(mobile-m) {
+          @include breakpointMax(mobile_m) {
             font-size: 35px;
           }
 
-          @include breakpointMax(mobile-s) {
+          @include breakpointMax(mobile_s) {
             font-size: 30px;
           }
 
@@ -704,7 +713,7 @@
     max-height: 300px;
     position: relative;
 
-    @include breakpointMin(screen-l) {
+    @include breakpointMin(screen_l) {
       max-height: unset;
     }
 
@@ -767,11 +776,11 @@
       top: -50px;
       right: -16px;
 
-      @include breakpointMin(screen-xl) {
+      @include breakpointMin(screen_xl) {
         width: 20vw;
       }
 
-      @include breakpointMin(screen-s) {
+      @include breakpointMin(screen_s) {
         top: -30px;
       }
     }
@@ -789,7 +798,7 @@
       transition: all .3s ease;
       will-change: transform;
 
-      @include breakpointMin(screen-xl) {
+      @include breakpointMin(screen_xl) {
         transform: translateX(30vw);
         width: 20vw;
         max-height: unset;
@@ -811,7 +820,7 @@
       opacity: 1;
       transform: translateX(500px);
 
-      @include breakpointMin(screen-xl) {
+      @include breakpointMin(screen_xl) {
         transform: translateX(30vw);
         width: 20vw;
         max-height: unset;
@@ -975,11 +984,11 @@
       bottom: 80px;
     }
 
-    @include breakpointMax(mobile-m) {
+    @include breakpointMax(mobile_m) {
       bottom: 65px;
     }
 
-    @include breakpointMax(mobile-s) {
+    @include breakpointMax(mobile_s) {
       bottom: 65px;
     }
 
@@ -1039,11 +1048,11 @@
   width: 342px;
   transform: translateX(0px);
 
-  @include breakpointMax(screen-m) {
+  @include breakpointMax(screen_m) {
     height: 45vh;
   }
 
-  @include breakpointMax(screen-s) {
+  @include breakpointMax(screen_s) {
     height: 45vh;
   }
 

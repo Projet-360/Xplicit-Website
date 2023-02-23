@@ -90,6 +90,25 @@ export class Scene {
     // this.controls.minPolarAngle = Math.PI/2;
     // this.controls.maxPolarAngle = Math.PI/2;
 
+    
+    // ambient light which is for the whole scene
+    this.ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    this.ambientLight.castShadow = true;
+    this.scene.add(this.ambientLight);    
+
+    // directional light - parallel sun rays
+    this.directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    this.directionalLight.castShadow = true;
+    //this.directionalLight.position.set(0, 32, 64);
+    this.directionalLight.position.copy(this.camera.localToWorld(new THREE.Vector3(-1, 1, 0)));
+    this.camera.add(this.directionalLight);
+
+    this.scene.add(this.camera);
+
+
+    // if window resizes
+    window.addEventListener('resize', () => this.onWindowResize(), false);
+
     const glftLoader = new GLTFLoader();
 
     glftLoader.load('../model/0.gltf', (gltfScene) => {
@@ -116,25 +135,6 @@ export class Scene {
       requestAnimationFrame(animate);
     };
     animate();
-
-
-    // ambient light which is for the whole scene
-    this.ambientLight = new THREE.AmbientLight(0xffffff, 1);
-    this.ambientLight.castShadow = true;
-    this.scene.add(this.ambientLight);    
-
-    // directional light - parallel sun rays
-    this.directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    this.directionalLight.castShadow = true;
-    //this.directionalLight.position.set(0, 32, 64);
-    this.directionalLight.position.copy(this.camera.localToWorld(new THREE.Vector3(-1, 1, 0)));
-    this.camera.add(this.directionalLight);
-
-    this.scene.add(this.camera);
-
-
-    // if window resizes
-    window.addEventListener('resize', () => this.onWindowResize(), false);
   }
 
   animate() {

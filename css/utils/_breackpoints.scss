@@ -1,13 +1,13 @@
 $breakpoints: (
   start: 0px,
-  mobile-s: 320px,
-  mobile-m: 360px,
-  mobile-l: 480px,
+  mobile_s: 320px,
+  mobile_m: 360px,
+  mobile_l: 480px,
   tablet: 540px,
-  screen-s: 1024px,
-  screen-m: 1366px,
-  screen-l: 1920px,
-  screen-xl: 3840px,
+  screen_s: 1024px,
+  screen_m: 1366px,
+  screen_l: 1920px,
+  screen_xl: 3840px,
 );
 
 @mixin breakpointMin($name) {
@@ -32,6 +32,40 @@ $breakpoints: (
   }
 }
 
-// @include breakpoint(small) {
-//   font-size: 1.2em;
-// }
+.burger {
+  @include breakpointMin(start) {
+    // Démarre par la valeur 0px vers l'infini    
+  }
+  
+  @include breakpointMin(mobile_s) {
+    // Démarre par la valeur 320px vers l'infini    
+  }
+
+  @include breakpointMin(mobile_m) {
+    // Démarre par la valeur 360px vers l'infini    
+  }
+
+  @include breakpointMin(mobile_l) {
+    // Démarre par la valeur 480px vers l'infini    
+  }
+
+  @include breakpointMin(tablet) {
+    // Démarre par la valeur 540px vers l'infini    
+  }
+
+  @include breakpointMin(screen_s) {
+    // Démarre par la valeur 1024px vers l'infini    
+  }
+
+  @include breakpointMin(screen_m) {
+    // Démarre par la valeur 1366px vers l'infini    
+  }
+
+  @include breakpointMin(screen_l) {
+    // Démarre par la valeur 1920px vers l'infini    
+  }
+
+  @include breakpointMin(screen_xl) {
+    // Démarre par la valeur 3840px vers l'infini    
+  }
+}
