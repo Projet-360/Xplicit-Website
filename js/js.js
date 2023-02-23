@@ -150,12 +150,12 @@ linkMenu.forEach(element => {
 
 new Scene('myThreeJsCanvas', '../assets/BAT/dragon.png');
 
-// new Product('product1', '../assets/BAT/dragon.png', 'boutique-item-canvas');
-// new Product('product2', '../assets/BAT/black.png', 'boutique-item-canvas');
-// new Product('product3', '../assets/BAT/wild.png', 'boutique-item-canvas');
-// new Product('product4', '../assets/BAT/fresh.png', 'boutique-item-canvas');
-// new Product('product5', '../assets/BAT/fresh.png', 'boutique-item-canvas');
-// new Product('product6', '../assets/BAT/fresh.png', 'boutique-item-canvas');
+new Product('product1', '../assets/BAT/dragon.png', 'boutique-item-canvas');
+new Product('product2', '../assets/BAT/black.png', 'boutique-item-canvas');
+new Product('product3', '../assets/BAT/wild.png', 'boutique-item-canvas');
+new Product('product4', '../assets/BAT/fresh.png', 'boutique-item-canvas');
+new Product('product5', '../assets/BAT/fresh.png', 'boutique-item-canvas');
+new Product('product6', '../assets/BAT/fresh.png', 'boutique-item-canvas');
 
 
 
@@ -171,15 +171,56 @@ let tl = gsap.timeline({
     start: 0,
     end: "bottom-=1px",
     scrub: 4,
-    //markers: true   
+    markers: true   
   },
 });
 
-tl.fromTo(".title", {
 
-  x: 0,
-}, {
-  x: 1000,
-  ease: "expoScale(0.01, 1)",
-}, "<")
 
+// tl.fromTo(".containerCan", {
+
+//   x: 0,
+//   opacity: 1,
+// }, {
+//   x: 1000,
+//   opacity: 0,
+//   ease: "expoScale(0.01, 1)",
+// }, "<")
+
+
+
+
+
+// tl.fromTo(".containerText", {
+
+//   y: 0,
+//   opacity: 1,
+// }, {
+//   y: -300,
+//   opacity: 0,
+//   ease: "expoScale(0.01, 1)",
+// }, "<")
+
+
+// tl.fromTo(".containerCan", {
+
+//   y: 0,
+//   opacity: 1,
+// }, {
+//   y: -300,
+//   opacity: 0,
+//   ease: "expoScale(0.01, 1)",
+// }, "<")
+
+
+
+
+// tl.fromTo(".containerCan", {
+
+//   y: 0,
+//   opacity: 1,
+// }, {
+//   y: -300,
+//   opacity: 0,
+//   ease: "expoScale(0.01, 1)",
+// }, "<")

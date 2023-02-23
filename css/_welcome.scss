@@ -1,13 +1,13 @@
 .welcome {
-  // min-height: 100vh;
-  // height: 100%;
-  // width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
 
   .containerText {
     @include ccs;
     margin-left: 10vw;
-    position: relative;
-    z-index: 9;
+    z-index: 6;
 
     width: 50%;
     height: 100vh;
@@ -19,40 +19,11 @@
       margin: 0;
     }
     
-    @include breakpointMin(mobile_s) {
-      // Démarre par la valeur 320px vers l'infini    
-    }
-  
-    @include breakpointMin(mobile_m) {
-      // Démarre par la valeur 360px vers l'infini    
-    }
-  
-    @include breakpointMin(mobile_l) {
-      // Démarre par la valeur 480px vers l'infini    
-    }
-  
-    @include breakpointMin(tablet) {
-      // Démarre par la valeur 540px vers l'infini    
-
-    }
-  
     @include breakpointMin(screen_s) {
       // Démarre par la valeur 1024px vers l'infini    
       @include ccc;
       width: 50%;
       margin: 0;
-    }
-  
-    @include breakpointMin(screen_m) {
-      // Démarre par la valeur 1366px vers l'infini    
-    }
-  
-    @include breakpointMin(screen_l) {
-      // Démarre par la valeur 1920px vers l'infini    
-    }
-  
-    @include breakpointMin(screen_xl) {
-      // Démarre par la valeur 3840px vers l'infini    
     }
 
 
@@ -389,16 +360,12 @@
   }
 
   .occitanie {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-content: center;
-    align-items: center;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    bottom: 0;
+    left: 50%;
 
     svg {
-      position: absolute;
       z-index: 4;
       width: 50vw;
       opacity: .2;
@@ -408,9 +375,10 @@
 
   .containerCan {
     @include ccc;
-    position: fixed;
+    //position: fixed;
     width: 50%;
     height: 100%;
+    overflow: hidden;
 
     top: 0;
     right: 0;
