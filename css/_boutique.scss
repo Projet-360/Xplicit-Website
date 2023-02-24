@@ -70,6 +70,28 @@
     margin-top: 50px;
     height: 500px !important;
 
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      width: 80vw;
+      margin-right: auto;
+      margin-left: auto;
+
+      .boutique-item {
+        width: 500px !important;
+      }
+      .boutique-item-box {
+        @include ccc;
+
+         .overlay {
+          transform: translateX(0px);
+         }
+      }
+    }
+
     .slick-list {
       padding-left: 10vw;
       overflow: hidden;
@@ -172,12 +194,7 @@
   }
 
   .boutique-item {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: flex-start;
+    @include ccc;
 
     height: 500px !important;
     width: 600px !important;
@@ -294,7 +311,7 @@
         }
 
         @include breakpointMin(screen_s) {          
-          transform: translateX(-45px);
+          transform: translateX(-90px);
         }
 
         @include breakpointMin(screen_m) {          
@@ -468,7 +485,7 @@
       }
 
       @include breakpointMin(screen_s) {        
-        font-size: 22px;
+        font-size: 21px;
         top: 370px;
         left: 230px;
 

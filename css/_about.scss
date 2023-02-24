@@ -86,10 +86,13 @@
         text-align: justify;
         text-transform: uppercase;
         font-family: regular;
+        line-height: 150%;
+        letter-spacing: .4px;
 
         @include breakpointMin(start) {
           // Démarre par la valeur 0px vers l'infini   
           width: 80vw; 
+          font-size: 15px;
         }
         
         @include breakpointMin(mobile_s) {
@@ -112,6 +115,7 @@
         @include breakpointMin(screen_s) {
           // Démarre par la valeur 1024px vers l'infini   
           width: 30vw; 
+          font-size: 18px;
         }
       
         @include breakpointMin(screen_m) {

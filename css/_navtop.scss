@@ -12,6 +12,47 @@
     width: 100%;
     height: 100px;
     z-index: 9;
+    background-color: transparent;
+    transition: background-color .5s ease;
+
+    &:hover {
+        background-color: white;
+    }
+
+    .navtop-ecom {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        .navtop-ecom-icon-bars {
+            transition: all .25s ease;
+
+        }
+
+        .navtop-ecom-icon-top{
+            transition: all .25s ease;
+            
+        }
+
+        .navtop-ecom-icon-content {
+            transition: all .25s ease;
+            transform: translateY(0px) rotate(0deg);
+
+        }
+
+        &:hover {
+            
+        .navtop-ecom-icon-top{
+        }
+
+        .navtop-ecom-icon-content {
+            transform: translateY(10px) rotate(10deg);
+            cursor: pointer;
+        }
+        }
+    }
 
     @include breakpointMax(tablet) {
         display: none;
@@ -65,7 +106,7 @@
         .navtop-link-img {
             height: 70px;
             @include breakpointMin(screen_s) {
-                height: 40px;
+                height: 80px;
             }
         }
     }

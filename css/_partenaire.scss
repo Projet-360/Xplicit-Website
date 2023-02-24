@@ -27,9 +27,43 @@
         margin-top: 20px;
         margin-bottom: 50px;
         font-size: 15px;
+        line-height: 150%;
+        letter-spacing: .4px;
         text-align: justify;
         text-transform: uppercase;
         font-family: regular;
+
+        @include breakpointMin(start) {
+            // Démarre par la valeur 0px vers l'infini    
+            font-size: 12px;
+          }
+          
+          @include breakpointMin(mobile_m) {
+            // Démarre par la valeur 360px vers l'infini    
+            font-size: 14px; 
+          }
+        
+          @include breakpointMin(mobile_l) {
+            // Démarre par la valeur 480px vers l'infini  
+            font-size: 15px;   
+          }
+        
+          @include breakpointMin(screen_s) {
+            // Démarre par la valeur 1024px vers l'infini   
+            width: 80%; 
+            font-size: 13px;
+            width: 30vw;
+          }
+        
+          @include breakpointMin(screen_l) {
+            // Démarre par la valeur 1920px vers l'infini    
+            font-size: 18px;   
+          }
+        
+          @include breakpointMin(screen_xl) {
+            // Démarre par la valeur 3840px vers l'infini    
+            font-size: 1vw;   
+          }
     }
 
 

@@ -863,6 +863,11 @@ template {
 .burger .burger-svg {
   overflow: hidden;
 }
+.burger .burger-svg rect {
+  stroke: url(#gradient1) !important;
+  color: #01251f, #9152f7, #07493d;
+  color: #032547, #cc00ff, #03172b;
+}
 .burger .burger-svg .border {
   fill: transparent;
   stroke: black;
@@ -1693,6 +1698,8 @@ template {
   width: 724px;
   font-size: 18px;
   font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.4px;
   text-align: justify;
   text-transform: uppercase;
   font-family: medium;
@@ -2072,6 +2079,30 @@ template {
   margin-top: 50px;
   height: 500px !important;
 }
+.boutique .boutique-container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+.boutique .boutique-container-grid .boutique-item {
+  width: 500px !important;
+}
+.boutique .boutique-container-grid .boutique-item-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.boutique .boutique-container-grid .boutique-item-box .overlay {
+  transform: translateX(0px);
+}
 .boutique .boutique-container .slick-list {
   padding-left: 10vw;
   overflow: hidden;
@@ -2154,10 +2185,10 @@ template {
 .boutique .boutique-item {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 500px !important;
   width: 600px !important;
   position: relative;
@@ -2279,7 +2310,7 @@ template {
 }
 @media (min-width: 1024px) {
   .boutique .boutique-item .boutique-item-canvas canvas {
-    transform: translateX(-45px);
+    transform: translateX(-90px);
   }
 }
 .boutique .boutique-item .boutique-item-title {
@@ -2407,7 +2438,7 @@ template {
 }
 @media (min-width: 1024px) {
   .boutique .boutique-item .boutique-item-link {
-    font-size: 22px;
+    font-size: 21px;
     top: 370px;
     left: 230px;
   }
@@ -2499,10 +2530,13 @@ template {
   text-align: justify;
   text-transform: uppercase;
   font-family: regular;
+  line-height: 150%;
+  letter-spacing: 0.4px;
 }
 @media (min-width: 0px) {
   .about .about-left .about-paragraph {
     width: 80vw;
+    font-size: 15px;
   }
 }
 @media (min-width: 540px) {
@@ -2513,6 +2547,7 @@ template {
 @media (min-width: 1024px) {
   .about .about-left .about-paragraph {
     width: 30vw;
+    font-size: 18px;
   }
 }
 .partenaire {
@@ -2545,9 +2580,43 @@ template {
   margin-top: 20px;
   margin-bottom: 50px;
   font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.4px;
   text-align: justify;
   text-transform: uppercase;
   font-family: regular;
+}
+@media (min-width: 0px) {
+  .partenaire .paragraph {
+    font-size: 12px;
+  }
+}
+@media (min-width: 360px) {
+  .partenaire .paragraph {
+    font-size: 14px;
+  }
+}
+@media (min-width: 480px) {
+  .partenaire .paragraph {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .partenaire .paragraph {
+    width: 80%;
+    font-size: 13px;
+    width: 30vw;
+  }
+}
+@media (min-width: 1920px) {
+  .partenaire .paragraph {
+    font-size: 18px;
+  }
+}
+@media (min-width: 3840px) {
+  .partenaire .paragraph {
+    font-size: 1vw;
+  }
 }
 .partenaire .slider {
   height: 30vh;
@@ -2634,6 +2703,32 @@ template {
   width: 100%;
   height: 100px;
   z-index: 9;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.navtop:hover {
+  background-color: white;
+}
+.navtop .navtop-ecom {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.navtop .navtop-ecom .navtop-ecom-icon-bars {
+  transition: all 0.25s ease;
+}
+.navtop .navtop-ecom .navtop-ecom-icon-top {
+  transition: all 0.25s ease;
+}
+.navtop .navtop-ecom .navtop-ecom-icon-content {
+  transition: all 0.25s ease;
+  transform: translateY(0px) rotate(0deg);
+}
+.navtop .navtop-ecom:hover .navtop-ecom-icon-content {
+  transform: translateY(10px) rotate(10deg);
+  cursor: pointer;
 }
 @media (max-width: 540px) {
   .navtop {
@@ -2684,7 +2779,7 @@ template {
 }
 @media (min-width: 1024px) {
   .navtop .navtop-link .navtop-link-img {
-    height: 40px;
+    height: 80px;
   }
 }
 .navtop:hover .navtop-nav .navtop-nav-item .navtop-nav-item-span {
