@@ -3,7 +3,42 @@ import onClassChange from "./utils/onClassChange.js";
 import { Scene } from "./Scene.js";
 import { Product } from "./Product.js";
 
+
+
+
+
+
+
+
+
+
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+  smooth: 2,   // seconds it takes to "catch up" to native scroll position
+  effects: true // look for data-speed and data-lag attributes on elements and animate accordingly
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ANIMATION BACKGROUND 
 const line = document.querySelectorAll('.line')
@@ -217,16 +252,20 @@ let tl = gsap.timeline({
 // }, "<")
 
 
+
+
+
 jQuery(document).ready(function(){
   jQuery('.slider').slick({
-      draggable:false,
+      draggable:true,
       slidesToShow:7,
       infinite:true,
       slidesToScrol1: 1,
       autoplay: true,
-      autoplaySpeed: 0, 
+      autoplaySpeed: 90, 
       arrows:false,
-      speed:3000,
+      speed:2500,
+      bordFriction: 1,
     easing:'linear',
       variableWidth:true,
       pauseOnHover:true,
