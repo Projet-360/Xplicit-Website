@@ -18,55 +18,47 @@
       font-style: italic;
       transform: skewX(-10deg);
 
-      @include breakpointMin(start) {
-        // Démarre par la valeur 0px vers l'infini    
+      @include breakpointMin(start) {        
         font-size: 22px;
         -webkit-text-stroke: 1px black;
         margin-bottom: 20px;
         margin-top: 20vh;
       }
 
-      @include breakpointMin(mobile_s) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(mobile_s) {        
         font-size: 22px;
         -webkit-text-stroke: 1px black;
         margin-top: 0vh;
       }
 
-      @include breakpointMin(mobile_m) {
-        // Démarre par la valeur 360px vers l'infini    
+      @include breakpointMin(mobile_m) {        
         font-size: 12vw;
         -webkit-text-stroke: 2px black;
       }
 
-      @include breakpointMin(mobile_l) {
-        // Démarre par la valeur 480px vers l'infini    
+      @include breakpointMin(mobile_l) {        
         font-size: 32px;
         -webkit-text-stroke: 2px black;
       }
 
-      @include breakpointMin(tablet) {
-        // Démarre par la valeur 540px vers l'infini    
+      @include breakpointMin(tablet) {        
         font-size: 40px;
         -webkit-text-stroke: 2px black;
       }
 
-      @include breakpointMin(screen_s) {
-        // Démarre par la valeur 1024px vers l'infini    
+      @include breakpointMin(screen_s) {        
         font-size: 30px;
         -webkit-text-stroke: 2px black;
         margin-bottom: 0px;
                 margin-top: 20vh;
       }
 
-      @include breakpointMin(screen_l) {
-        // Démarre par la valeur 1920px vers l'infini    
+      @include breakpointMin(screen_l) {        
         font-size: 60px;
         -webkit-text-stroke: 3px black;
       }
 
-      @include breakpointMin(screen_xl) {
-        // Démarre par la valeur 3840px vers l'infini    
+      @include breakpointMin(screen_xl) {        
         font-size: 3vw;
       }
     }
@@ -112,43 +104,35 @@
       filter: invert(1);
     }
 
-    @include breakpointMin(start) {
-      // Démarre par la valeur 0px vers l'infini    
+    @include breakpointMin(start) {      
       height: 250px !important;
     }
 
-    @include breakpointMin(mobile_s) {
-      // Démarre par la valeur 320px vers l'infini    
+    @include breakpointMin(mobile_s) {      
     }
 
-    @include breakpointMin(mobile_m) {
-      // Démarre par la valeur 360px vers l'infini    
+    @include breakpointMin(mobile_m) {      
     }
 
-    @include breakpointMin(mobile_l) {
-      // Démarre par la valeur 480px vers l'infini  
-      height: 340px !important;
+    @include breakpointMin(mobile_l) {      
+      height: 65vw !important;
+      max-height: 100%;
     }
 
-    @include breakpointMin(tablet) {
-      // Démarre par la valeur 540px vers l'infini    
+    @include breakpointMin(tablet) {      
     }
 
-    @include breakpointMin(screen_s) {
-      // Démarre par la valeur 1024px vers l'infini    
+    @include breakpointMin(screen_s) {      
       height: 500px !important;
     }
 
-    @include breakpointMin(screen_m) {
-      // Démarre par la valeur 1366px vers l'infini    
+    @include breakpointMin(screen_m) {      
     }
 
-    @include breakpointMin(screen_l) {
-      // Démarre par la valeur 1920px vers l'infini    
+    @include breakpointMin(screen_l) {      
     }
 
-    @include breakpointMin(screen_xl) {
-      // Démarre par la valeur 3840px vers l'infini    
+    @include breakpointMin(screen_xl) {      
     }
   }
 
@@ -163,31 +147,27 @@
     height: 500px !important;
     width: 600px !important;
 
-    @include breakpointMin(start) {
-      // Démarre par la valeur 0px vers l'infini    
+    @include breakpointMin(start) {      
     }
 
-    @include breakpointMin(mobile_s) {
-      // Démarre par la valeur 320px vers l'infini    
-      width: 250px !important;
+    @include breakpointMin(mobile_s) {      
+      width: 80vw !important;
       height: 250px !important;
     }
 
-    @include breakpointMin(mobile_m) {
-      // Démarre par la valeur 320px vers l'infini    
-      width: 300px !important;
+    @include breakpointMin(mobile_m) {      
+
       height: 250px !important;
     }
 
-    @include breakpointMin(mobile_l) {
-      // Démarre par la valeur 480px vers l'infini  
-      height: 350px !important;
+    @include breakpointMin(mobile_l) {      
+      height: 65vw !important;
     }
 
-    @include breakpointMin(screen_s) {
-      // Démarre par la valeur 480px vers l'infini  
+    @include breakpointMin(screen_s) {      
       height: 500px !important;
       width: 600px !important;
+
     }
   }
 
@@ -203,23 +183,19 @@
     width: 600px !important;
     position: relative;
 
-    @include breakpointMin(start) {
-      // Démarre par la valeur 0px vers l'infini    
+    @include breakpointMin(start) {      
     }
 
-    @include breakpointMin(mobile_s) {
-      // Démarre par la valeur 320px vers l'infini    
+    @include breakpointMin(mobile_s) {      
       width: 90vw !important;
       height: 260px !important;
     }
 
-    @include breakpointMin(mobile_l) {
-      // Démarre par la valeur 320px vers l'infini    
-      height: 330px !important;
+    @include breakpointMin(mobile_l) {      
+      height: 65vw !important;
     }
 
-    @include breakpointMin(screen_s) {
-      // Démarre par la valeur 320px vers l'infini    
+    @include breakpointMin(screen_s) {      
       height: 500px !important;
       width: 600px !important;
     }
@@ -232,30 +208,25 @@
       transform: translateX(110px);
       z-index: 10;
 
-      @include breakpointMin(start) {
-        // Démarre par la valeur 0px vers l'infini    
+      @include breakpointMin(start) {        
       }
 
-      @include breakpointMin(mobile_s) {
-        // Démarre par la valeur 320px vers l'infini    
-        width: 190px !important;
+      @include breakpointMin(mobile_s) {        
+        width: 130px !important;
         height: 210px !important;
-        transform: translateX(80px);
+        transform: translateX(20vw) translateY(5px)
       }
 
-      @include breakpointMin(mobile_m) {
-        // Démarre par la valeur 320px vers l'infini    
-        width: 220px !important;
+      @include breakpointMin(mobile_m) {        
+        width: 40vw !important;
       }
 
-      @include breakpointMin(mobile_l) {
-        // Démarre par la valeur 320px vers l'infini    
-        width: 300px !important;
-        height: 270px !important;
+      @include breakpointMin(mobile_l) {        
+        height: 80% !important;
+        width: 40vw !important;
       }
 
-      @include breakpointMin(screen_s) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(screen_s) {        
         height: 400px !important;
         width: 270px !important;
         transform: translateX(110px);
@@ -263,28 +234,26 @@
     }
 
     .boutique-item-canvas {
+      @include ccc;
       position: relative;
       width: 400px;
       height: 500px;
 
-      @include breakpointMin(start) {
-        // Démarre par la valeur 0px vers l'infini    
+      @include breakpointMin(start) {        
       }
 
-      @include breakpointMin(mobile_s) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(mobile_s) {        
         width: 250px !important;
         height: 250px !important;
+        
       }
 
-      @include breakpointMin(mobile_l) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(mobile_l) {        
         width: 400px !important;
-        height: 320px !important;
+        height: 100% !important;
       }
 
-      @include breakpointMin(screen_s) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(screen_s) {        
         width: 500px !important;
         height: 500px !important;
       }
@@ -295,52 +264,46 @@
         width: 400px !important;
         height: 500px !important;
 
-        @include breakpointMin(start) {
-          // Démarre par la valeur 0px vers l'infini    
+        @include breakpointMin(start) {          
         }
 
-        @include breakpointMin(mobile_s) {
-          // Démarre par la valeur 320px vers l'infini    
+        @include breakpointMin(mobile_s) {          
           width: 250px !important;
           height: 250px !important;
           transform: translateX(-25px);
         }
 
-        @include breakpointMin(mobile_m) {
-          // Démarre par la valeur 320px vers l'infini    
+        @include breakpointMin(mobile_m) {          
           width: 250px !important;
           height: 250px !important;
           transform: translateX(-25px);
         }    
 
-        @include breakpointMin(mobile_l) {
-          // Démarre par la valeur 480px vers l'infini    
-          width: 400px !important;
-          height: 320px !important;
-          transform: translateX(-70px);
+        @include breakpointMin(mobile_l) {          
+          width: auto !important;
+          left: 2vw; 
+          max-width: unset;
+          height: 100% !important;
         }
 
-        @include breakpointMin(tablet) {
-          // Démarre par la valeur 540px vers l'infini    
+        @include breakpointMin(tablet) {          
+          width: auto !important;
+          left: 2vw; 
+          max-width: unset;
+          height: 100% !important;
         }
 
-        @include breakpointMin(screen_s) {
-          // Démarre par la valeur 1024px vers l'infini    
-          width: 500px !important;
-          height: 500px !important;
+        @include breakpointMin(screen_s) {          
           transform: translateX(-45px);
         }
 
-        @include breakpointMin(screen_m) {
-          // Démarre par la valeur 1366px vers l'infini    
+        @include breakpointMin(screen_m) {          
         }
 
-        @include breakpointMin(screen_l) {
-          // Démarre par la valeur 1920px vers l'infini    
+        @include breakpointMin(screen_l) {          
         }
 
-        @include breakpointMin(screen_xl) {
-          // Démarre par la valeur 3840px vers l'infini    
+        @include breakpointMin(screen_xl) {          
         }
       }
     }
@@ -360,51 +323,43 @@
       top: 90px;
       left: 230px;
 
-      @include breakpointMin(start) {
-        // Démarre par la valeur 0px vers l'infini    
+      @include breakpointMin(start) {        
       }
 
-      @include breakpointMin(mobile_s) {
-        // Démarre par la valeur 320px vers l'infini    
-        font-size: 25px;
+      @include breakpointMin(mobile_s) {        
+        font-size: 40px;
         -webkit-text-stroke: 1px black;
         top: 30px;
         left: 110px;
       }
 
-      @include breakpointMin(mobile_m) {
-        // Démarre par la valeur 360px vers l'infini    
+      @include breakpointMin(mobile_m) {        
       }
 
-      @include breakpointMin(mobile_l) {
-        // Démarre par la valeur 480px vers l'infini    
-        font-size: 32px;
-        -webkit-text-stroke: 1px black;
+      @include breakpointMin(mobile_l) {        
+        font-size: 9vw;
+        -webkit-text-stroke: 2px black;
         top: 60px;
-        left: 140px;
+        left: 35vw;
       }
 
-      @include breakpointMin(tablet) {
-        // Démarre par la valeur 540px vers l'infini    
+      @include breakpointMin(tablet) {        
       }
 
-      @include breakpointMin(screen_s) {
-        // Démarre par la valeur 1024px vers l'infini    
+      @include breakpointMin(screen_s) {        
+        font-size: 60px;
         top: 90px;
         left: 230px;
         -webkit-text-stroke: 2px black;
       }
 
-      @include breakpointMin(screen_m) {
-        // Démarre par la valeur 1366px vers l'infini    
+      @include breakpointMin(screen_m) {        
       }
 
-      @include breakpointMin(screen_l) {
-        // Démarre par la valeur 1920px vers l'infini    
+      @include breakpointMin(screen_l) {        
       }
 
-      @include breakpointMin(screen_xl) {
-        // Démarre par la valeur 3840px vers l'infini    
+      @include breakpointMin(screen_xl) {        
       }
     }
 
@@ -423,53 +378,44 @@
       top: 200px;
       left: 230px;
 
-      @include breakpointMin(start) {
-        // Démarre par la valeur 0px vers l'infini    
+      @include breakpointMin(start) {        
       }
 
-      @include breakpointMin(mobile_s) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(mobile_s) {        
         font-size: 11px;
-        top: 80px;
+        top: 100px;
         left: 110px;
         width: 150px;
       }
 
-      @include breakpointMin(mobile_m) {
-        // Démarre par la valeur 360px vers l'infini    
+      @include breakpointMin(mobile_m) {        
         width: 180px;
       }
 
-      @include breakpointMin(mobile_l) {
-        // Démarre par la valeur 480px vers l'infini    
+      @include breakpointMin(mobile_l) {        
         font-size: 14px;
-        top: 110px;
-        left: 140px;
-        width: 200px;
+        top: 35vw;
+        left: 35vw;
+        width: 50vw;
       }
 
-      @include breakpointMin(tablet) {
-        // Démarre par la valeur 540px vers l'infini    
+      @include breakpointMin(tablet) {        
       }
 
-      @include breakpointMin(screen_s) {
-        // Démarre par la valeur 1024px vers l'infini    
+      @include breakpointMin(screen_s) {        
         top: 200px;
         left: 230px;
         font-size: 22px;
         width: unset;
       }
 
-      @include breakpointMin(screen_m) {
-        // Démarre par la valeur 1366px vers l'infini    
+      @include breakpointMin(screen_m) {        
       }
 
-      @include breakpointMin(screen_l) {
-        // Démarre par la valeur 1920px vers l'infini    
+      @include breakpointMin(screen_l) {        
       }
 
-      @include breakpointMin(screen_xl) {
-        // Démarre par la valeur 3840px vers l'infini    
+      @include breakpointMin(screen_xl) {        
       }
     }
 
@@ -491,35 +437,37 @@
       position: absolute;
       top: 370px;
       left: 230px;
+      transition: all .25s ease;
+      transform: translateX(0px);
 
-
-      @include breakpointMin(start) {
-        // Démarre par la valeur 0px vers l'infini    
+      &:hover {
+        transform: translateX(10px);
       }
 
-      @include breakpointMin(mobile_s) {
-        // Démarre par la valeur 320px vers l'infini    
+
+      @include breakpointMin(start) {        
+      }
+
+      @include breakpointMin(mobile_s) {        
         font-size: 13px;
         top: 160px;
         left: 100px;
         width: 110px;
       }
 
-      @include breakpointMin(mobile_m) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(mobile_m) {        
         width: 140px;
       }
 
 
-      @include breakpointMin(mobile_l) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(mobile_l) {        
         font-size: 13px;
-        top: 230px;
-        left: 140px;
+        top: 50vw;
+        left: 35vw;
+    
       }
 
-      @include breakpointMin(screen_s) {
-        // Démarre par la valeur 320px vers l'infini    
+      @include breakpointMin(screen_s) {        
         font-size: 22px;
         top: 370px;
         left: 230px;
