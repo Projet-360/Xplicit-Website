@@ -4,19 +4,34 @@
   width: 100%;
   display: flex;
 
+
+  @include breakpointMin(start) {
+    // Démarre par la valeur 0px vers l'infini    
+    height: 100%;
+    min-height: unset;
+    position: relative;
+  }
+  
+  @include breakpointMin(screen_s) {
+    // Démarre par la valeur 1024px vers l'infini    
+    height: 100vh;
+  }
+
+
   .containerText {
     @include ccs;
     margin-left: 10vw;
     z-index: 6;
-
-    width: 50%;
-    height: 100vh;
 
     @include breakpointMin(start) {
       // Démarre par la valeur 0px vers l'infini    
       @include ccc;
       width: 100vw;
       margin: 0;
+      height: 100%;
+      margin-top: 200px;
+      margin-bottom: 100px;
+      min-height: unset;
     }
     
     @include breakpointMin(screen_s) {
@@ -24,6 +39,7 @@
       @include ccc;
       width: 50%;
       margin: 0;
+      height: 100vh;
     }
 
 
@@ -134,7 +150,16 @@
         margin-left: auto;
         margin-right: auto;
       }
-  
+    }
+
+
+    .mobile-button {
+      display: flex;
+      margin-top: 50px;
+      @include breakpointMin(screen_s) {
+        // Démarre par la valeur 480px vers l'infini  
+        display: none;  
+      }
     }
 
     .subParagraph {
@@ -176,6 +201,12 @@
       background-size: contain;
       z-index: 5;
       padding: 17px;
+      transition: all .25s ease;
+
+      &:hover {
+        border: 5px dashed #53b2ff;
+        cursor:grab;
+      }
 
       @include breakpointMin(start) {
         // Démarre par la valeur 0px vers l'infini   
@@ -220,7 +251,7 @@
         display: none; 
       }
     
-      @include breakpointMin(tablet) {
+      @include breakpointMin(screen_s) {
         // Démarre par la valeur 540px vers l'infini    
         display: flex;
       }
@@ -277,6 +308,10 @@
     .fileLoader+label * {
       /* pointer-events: none; */
       /* in case of FastClick lib use */
+      transition: all .25s;
+      &:hover {
+        color: #53b2ff;
+      }
     }
 
     .fileLoader+label svg {
@@ -311,15 +346,11 @@
       @include breakpointMin(start) {
         display: none; 
       }
-    
-      @include breakpointMin(tablet) {
-        // Démarre par la valeur 540px vers l'infini    
-        display: flex;
-      }
           
       @include breakpointMin(screen_s) {
         // Démarre par la valeur 1024px vers l'infini    
         width: 130px;
+        display: flex;
       }
 
       @include breakpointMin(screen_l) {
@@ -340,6 +371,11 @@
         text-transform: uppercase;
         font-family: regular;
         color: #2b2b2b;
+
+        transition: all .25s;
+        &:hover {
+          color: #53b2ff;
+        }
 
         @include breakpointMin(screen_s) {
           // Démarre par la valeur 1024px vers l'infini    
@@ -378,7 +414,7 @@
     //position: fixed;
     width: 50%;
     height: 100%;
-    overflow: hidden;
+    //overflow: hidden;
 
     top: 0;
     right: 0;
@@ -389,8 +425,14 @@
       height: 100%;
     }
 
-    @media screen and (max-width: 540px) {
+    @include breakpointMin(start) {
+      // Démarre par la valeur 0px vers l'infini    
       display: none;
+    }
+
+    @include breakpointMin(screen_s) {
+      // Démarre par la valeur 540px vers l'infini    
+      display: flex;
     }
   }
 }

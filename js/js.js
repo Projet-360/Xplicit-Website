@@ -5,12 +5,6 @@ import { Product } from "./Product.js";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// let smoother = ScrollSmoother.create({
-//   smooth: 2,   // seconds it takes to "catch up" to native scroll position
-//   effects: true // look for data-speed and data-lag attributes on elements and animate accordingly
-// });
-
-
 // ANIMATION BACKGROUND 
 const line = document.querySelectorAll('.line')
 
@@ -153,9 +147,6 @@ new Scene('myThreeJsCanvas', '../assets/BAT/dragon.png');
 new Product('product1', '../assets/BAT/dragon.png', 'boutique-item-canvas');
 new Product('product2', '../assets/BAT/black.png', 'boutique-item-canvas');
 new Product('product3', '../assets/BAT/wild.png', 'boutique-item-canvas');
-new Product('product4', '../assets/BAT/fresh.png', 'boutique-item-canvas');
-new Product('product5', '../assets/BAT/fresh.png', 'boutique-item-canvas');
-new Product('product6', '../assets/BAT/fresh.png', 'boutique-item-canvas');
 
 
 
@@ -171,7 +162,7 @@ let tl = gsap.timeline({
     start: 0,
     end: "bottom-=1px",
     scrub: 4,
-    markers: true   
+    //markers: true   
   },
 });
 
@@ -224,3 +215,50 @@ let tl = gsap.timeline({
 //   opacity: 0,
 //   ease: "expoScale(0.01, 1)",
 // }, "<")
+
+
+jQuery(document).ready(function(){
+  jQuery('.slider').slick({
+      draggable:false,
+      slidesToShow:7,
+      infinite:true,
+      slidesToScrol1: 1,
+      autoplay: true,
+      autoplaySpeed: 0, 
+      arrows:false,
+      speed:3000,
+    easing:'linear',
+      variableWidth:true,
+      pauseOnHover:true,
+    slide: '.slider .group',
+    swipeToSlide:true,
+  });
+jQuery('.slider' ).hover(function(){
+  //jQuery('.slider').slick("slickSetOption", "slidesToScroll", 0, false);
+  
+},function(){
+  //jQuery('.slider').slick("slickSetOption", "slidesToScroll", 1, false);                
+});
+jQuery('.slider .item').hover(function(){
+  var $neededSpace = (170 + 95);
+        jQuery(this).removeClass('display-left');
+
+  
+  var $myPosX = ((jQuery('.slider').offset().left) + (jQuery('.slider').outerWidth(true))) - jQuery(this).offset().left;
+  
+  if ($myPosX < $neededSpace) {
+          jQuery(this).addClass('display-left');    
+    
+  }
+});
+jQuery('.prev').click(function(){
+        alert("!");
+        jQuery('.slider').slick('slickPrev');
+  
+});
+jQuery('.next').hover(function(){
+        jQuery('.slider').slick('slidesToScroll', 1, true ,false);
+
+  
+});
+});

@@ -3,21 +3,7 @@
   overflow: hidden;
 
   //@include clc;
-  min-height: 100vh;
-
-  .boutique-overlay {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 0%;
-    right: -30%;
-    width: 50vw;
-    height: 50vh;
-    background-image: url('../assets/shop.svg');
-    background-repeat: repeat;
-    background-size: 210px;
-    z-index: -10;
-    opacity: .3;
-  }
+  min-height: fit-content;
 
   .boutique-title {
     padding: 0px 10vw;
@@ -44,12 +30,13 @@
         // Démarre par la valeur 320px vers l'infini    
         font-size: 22px;
         -webkit-text-stroke: 1px black;
+        margin-top: 0vh;
       }
 
       @include breakpointMin(mobile_m) {
         // Démarre par la valeur 360px vers l'infini    
-        font-size: 25px;
-        -webkit-text-stroke: 1px black;
+        font-size: 12vw;
+        -webkit-text-stroke: 2px black;
       }
 
       @include breakpointMin(mobile_l) {
@@ -69,6 +56,7 @@
         font-size: 30px;
         -webkit-text-stroke: 2px black;
         margin-bottom: 0px;
+                margin-top: 20vh;
       }
 
       @include breakpointMin(screen_l) {
@@ -88,11 +76,40 @@
 
   .boutique-container {
     margin-top: 50px;
-    overflow: hidden;
     height: 500px !important;
 
     .slick-list {
       padding-left: 10vw;
+      overflow: hidden;
+      max-height: 100%;
+    }
+
+    .slick-prev {
+      &::before {
+        font-size: 5vw;
+      }
+      top: 0;
+      
+      right: unset;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      z-index: 6;
+      filter: invert(1);
+    }
+
+    .slick-next {
+      &::before {
+        font-size: 5vw;
+      }
+      top: 0;
+      right: unset;
+      left: unset;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      z-index: 6;
+      filter: invert(1);
     }
 
     @include breakpointMin(start) {

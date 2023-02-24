@@ -19,11 +19,30 @@
         height: 100vh;
         object-fit: cover;
       }
+
+      @include breakpointMin(start) {
+        display: none;
+      }
+    
+      @include breakpointMin(screen_s) {
+        // Démarre par la valeur 540px vers l'infini    
+        display: flex;
+      }
     }
   
-    .about-left {
-      width: 50vw;
+    .about-left {      
       padding-left: 10vw;
+
+      @include breakpointMin(start) {
+        // Démarre par la valeur 0px vers l'infini    
+        width: 100vw;
+      }
+
+      @include breakpointMin(screen_s) {
+        // Démarre par la valeur 540px vers l'infini    
+        width: 50vw;
+      }
+
       .about-title {
         .about-title-text {
           font-family: italic;
@@ -34,6 +53,16 @@
           font-weight: 900;
           font-style: italic;
           transform: skewX(-10deg);
+
+          @include breakpointMin(start) {
+            // Démarre par la valeur 0px vers l'infini    
+            font-size: 14vw;
+          }
+
+          @include breakpointMin(screen_s) {
+            // Démarre par la valeur 0px vers l'infini    
+            font-size: 60px;
+          }
         }
         width: 100%;
         margin-bottom: 50px;
@@ -45,6 +74,45 @@
         text-align: justify;
         text-transform: uppercase;
         font-family: regular;
+
+        @include breakpointMin(start) {
+          // Démarre par la valeur 0px vers l'infini   
+          width: 80vw; 
+        }
+        
+        @include breakpointMin(mobile_s) {
+          // Démarre par la valeur 320px vers l'infini    
+        }
+      
+        @include breakpointMin(mobile_m) {
+          // Démarre par la valeur 360px vers l'infini    
+        }
+      
+        @include breakpointMin(mobile_l) {
+          // Démarre par la valeur 480px vers l'infini    
+        }
+      
+        @include breakpointMin(tablet) {
+          // Démarre par la valeur 540px vers l'infini    
+          width: 80vw;
+        }
+      
+        @include breakpointMin(screen_s) {
+          // Démarre par la valeur 1024px vers l'infini   
+          width: 30vw; 
+        }
+      
+        @include breakpointMin(screen_m) {
+          // Démarre par la valeur 1366px vers l'infini    
+        }
+      
+        @include breakpointMin(screen_l) {
+          // Démarre par la valeur 1920px vers l'infini    
+        }
+      
+        @include breakpointMin(screen_xl) {
+          // Démarre par la valeur 3840px vers l'infini    
+        }
       }
     }
   
