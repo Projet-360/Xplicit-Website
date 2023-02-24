@@ -197,10 +197,18 @@ let tl = gsap.timeline({
     start: 0,
     end: "bottom-=1px",
     scrub: 4,
-    //markers: true   
+    markers: true   
   },
 });
 
+tl.fromTo(".about-right img", {
+  x: -30,
+  scale: 1.4,
+}, {
+  x: -150,
+  scale: 1.7,
+  ease: "expoScale(0.01, 1)",
+}, "<")
 
 
 // tl.fromTo(".containerCan", {
