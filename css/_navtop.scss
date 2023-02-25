@@ -20,8 +20,8 @@
     }
 
     .navtop-ecom {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         position: absolute;
         top: 15px;
         right: 15px;
@@ -32,30 +32,79 @@
         }
 
         .navtop-ecom-icon-top{
-            transition: all .25s ease;
-            
+            transform: translateY(0px) ;
+            transition: all .25s ease;            
         }
 
         .navtop-ecom-icon-content {
             transition: all .25s ease;
-            transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) ;
+        }
 
+        .wheelLeft {
+            transition: all .25s ease;
+            transform: translateY(0px) ;   
+        }
+
+        .wheelRight {
+            transition: all .25s ease;
+            
+        }
+
+        .caddie {
+            transition: all .25s ease;
+        }
+
+
+        .counter {
+            transition: all .5s ease;
+        }
+
+        svg path {
+            fill: url(#gradient1) !important;
         }
 
         &:hover {
-            
-        .navtop-ecom-icon-top{
+        cursor: pointer;
+
+        .wheelLeft {
+            position: absolute;
+            transform: translateY(-20px) ;   
         }
 
-        .navtop-ecom-icon-content {
-            transform: translateY(10px) rotate(10deg);
-            cursor: pointer;
+        .wheelRight {
+            position: absolute;
+            transform: translateY(-50px);    
+        }
+
+        .caddie {
+            transform: rotate(-6deg) scale(.999) translate(-20px, 25px);
+        }
+
+        .counter {
+            transform: translateY(-7px) ;   
         }
         }
     }
 
     @include breakpointMax(tablet) {
         display: none;
+    }
+
+    .counter {
+        position: absolute;
+        top: -5px;
+        left: 25px;
+
+        -webkit-text-stroke: 1px black;
+        font-family: italic;
+        font-size: 27px;
+        color: transparent;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-style: italic;
+        width: 30px;
+        text-align: center;
     }
     
     .navtop-nav {

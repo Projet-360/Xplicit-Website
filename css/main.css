@@ -865,8 +865,6 @@ template {
 }
 .burger .burger-svg rect {
   stroke: url(#gradient1) !important;
-  color: #01251f, #9152f7, #07493d;
-  color: #032547, #cc00ff, #03172b;
 }
 .burger .burger-svg .border {
   fill: transparent;
@@ -2561,7 +2559,6 @@ template {
   width: 100%;
   display: flex;
   padding-top: 20vh;
-  padding-bottom: 35vh;
 }
 .partenaire .title {
   -webkit-text-stroke: 2px black;
@@ -2710,8 +2707,8 @@ template {
   background-color: white;
 }
 .navtop .navtop-ecom {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -2720,20 +2717,64 @@ template {
   transition: all 0.25s ease;
 }
 .navtop .navtop-ecom .navtop-ecom-icon-top {
+  transform: translateY(0px);
   transition: all 0.25s ease;
 }
 .navtop .navtop-ecom .navtop-ecom-icon-content {
   transition: all 0.25s ease;
-  transform: translateY(0px) rotate(0deg);
+  transform: translateY(0px);
 }
-.navtop .navtop-ecom:hover .navtop-ecom-icon-content {
-  transform: translateY(10px) rotate(10deg);
+.navtop .navtop-ecom .wheelLeft {
+  transition: all 0.25s ease;
+  transform: translateY(0px);
+}
+.navtop .navtop-ecom .wheelRight {
+  transition: all 0.25s ease;
+}
+.navtop .navtop-ecom .caddie {
+  transition: all 0.25s ease;
+}
+.navtop .navtop-ecom .counter {
+  transition: all 0.5s ease;
+}
+.navtop .navtop-ecom svg path {
+  fill: url(#gradient1) !important;
+}
+.navtop .navtop-ecom:hover {
   cursor: pointer;
+}
+.navtop .navtop-ecom:hover .wheelLeft {
+  position: absolute;
+  transform: translateY(-20px);
+}
+.navtop .navtop-ecom:hover .wheelRight {
+  position: absolute;
+  transform: translateY(-50px);
+}
+.navtop .navtop-ecom:hover .caddie {
+  transform: rotate(-6deg) scale(0.999) translate(-20px, 25px);
+}
+.navtop .navtop-ecom:hover .counter {
+  transform: translateY(-7px);
 }
 @media (max-width: 540px) {
   .navtop {
     display: none;
   }
+}
+.navtop .counter {
+  position: absolute;
+  top: -5px;
+  left: 25px;
+  -webkit-text-stroke: 1px black;
+  font-family: italic;
+  font-size: 27px;
+  color: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  width: 30px;
+  text-align: center;
 }
 .navtop .navtop-nav {
   display: flex;
@@ -2794,6 +2835,7 @@ template {
   position: relative;
   grid-area: footer;
   min-height: 12rem;
+  margin-top: 200px;
 }
 .footer .bubbles {
   position: absolute;
@@ -2977,7 +3019,7 @@ template {
 }
 @media (max-width: 1920px) {
   .footer .content .list-content ul .footer-item {
-    height: 60px;
+    height: 50px;
   }
 }
 @media (max-width: 1366px) {
@@ -3024,7 +3066,7 @@ template {
 }
 @media (max-width: 1920px) {
   .footer .content .list-content ul .footer-item .footer-item-link {
-    font-size: 60px;
+    font-size: 45px;
     padding: 0px 15px;
   }
 }

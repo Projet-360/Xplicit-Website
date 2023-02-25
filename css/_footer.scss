@@ -8,6 +8,7 @@
     position: relative;
     grid-area: footer;
     min-height: 12rem;
+    margin-top: 200px;
   
     .bubbles {
       position: absolute;
@@ -185,7 +186,7 @@
             }
   
             @include breakpointMax(screen_l) {
-              height: 60px;
+              height: 50px;
             }
   
             @include breakpointMax(screen_m) {
@@ -217,7 +218,7 @@
               }
   
               @include breakpointMax(screen_l) {
-                font-size: 60px;
+                font-size: 45px;
                 padding: 0px 15px;
               }
   
