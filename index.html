@@ -8,16 +8,11 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
-
     <script type="importmap">
         {
             "imports": {
-                "three": "./lib/three.module.js",
-                "OrbitControls": "./lib/OrbitControls.js"
+                "three": "./js/lib/three/three.module.js",
+                "OrbitControls": "./js/lib/three/OrbitControls.js"
             }
         }
     </script>
@@ -1236,40 +1231,18 @@
     </header>
 
 
+    <script src="./js/lib/grained.min.js"></script>
 
+    <script src="./js/lib/jquery-1.11.0.min.js"></script>
+    <script src="./js/lib/jquery-migrate-1.2.1.min.js"></script>
 
+    <script src="./js/lib/slick.min.js"></script>
 
+    <script src="./js/lib/gsap.min.js"></script>
+    <script src="./js/lib/ScrollTrigger.min.js"></script>
+    <script src="./js/lib/ScrollToPlugin.min.js"></script>
+    <script src="./js/lib/SmoothScroll.js"></script>
 
-    <script src="./node_modules/grained/grained.min.js"></script>
-
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.boutique-container').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: false,
-                autoplaySpeed: 4000,
-                infinite: false,
-
-                responsive: [{
-                    breakpoint: 540,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                }, ]
-            });
-        });
-    </script>
-
-    <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.11.3'></script>
-    <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js'></script>
-    <script src="./lib/SmoothScroll.js"></script>
-    <script src='https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js'></script>
     <script src="js/js.js" type="module"></script>
 </body>
 

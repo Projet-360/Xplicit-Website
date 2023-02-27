@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import {
   OrbitControls
-} from '../lib/OrbitControls.js';
+} from './lib/three/OrbitControls.js';
 import {
   GLTFLoader
-} from '../lib/GLTFLoader.js';
+} from './lib/three/GLTFLoader.js';
 
 export class Product {
   constructor(canvasId, url) {

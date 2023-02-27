@@ -1,6 +1,6 @@
 
 import onClassChange from "./utils/onClassChange.js";
-// import { Scene } from "./Scene.js";
+import { Scene } from "./Scene.js";
 import { Product } from "./Product.js";
 
 
@@ -177,7 +177,7 @@ linkMenu.forEach(element => {
     });
   }
 
-// new Scene('myThreeJsCanvas', '../assets/BAT/dragon.png');
+new Scene('myThreeJsCanvas', '../assets/BAT/dragon.png');
 
 new Product('product1', '../assets/BAT/dragon.png', 'boutique-item-canvas');
 new Product('product2', '../assets/BAT/black.png', 'boutique-item-canvas');
@@ -261,7 +261,23 @@ tl.fromTo(".about-right img", {
 
 
 
+$(document).ready(function () {
+  $('.boutique-container').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      infinite: false,
 
+      responsive: [{
+          breakpoint: 540,
+          settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+          }
+      }, ]
+  });
+});
 
 jQuery(document).ready(function(){
   jQuery('.slider').slick({
